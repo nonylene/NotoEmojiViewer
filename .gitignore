@@ -1,0 +1,4 @@
+/build
+*.ttf
+app.iml
+proguard-rules.pro
