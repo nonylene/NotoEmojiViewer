@@ -3,7 +3,6 @@
 
     <Preference
         android:key="about_app"
-        android:title="About this app"
-        android:summary="This app uses apache"/>
+        android:title="@string/about_app_title"/>
 
 </PreferenceScreen>
