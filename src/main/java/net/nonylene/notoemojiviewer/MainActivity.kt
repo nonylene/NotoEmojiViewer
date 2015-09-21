@@ -17,7 +17,11 @@ public class MainActivity : Activity() {
             intent.getStringExtra(Intent.EXTRA_TEXT)?.let {
                 val toast = Toast.makeText(applicationContext, it, Toast.LENGTH_LONG)
                 val textView = (toast.view as LinearLayout).getChildAt(0) as TextView
-                textView.typeface = Typeface.createFromAsset(assets, "NotoColorEmoji.ttf")
+                try {
+                    textView.typeface = Typeface.createFromAsset(assets, "NotoColorEmoji.ttf")
+                } catch (e: RuntimeException) {
+                    textView.typeface = Typeface.createFromAsset(assets, "NotoEmoji-Regular.ttf")
+                }
                 toast.show()
             }
         }
