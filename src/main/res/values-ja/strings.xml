@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_app_title">このアプリについて</string>
+    <string name="about_app_dialogtitle">このアプリについて</string>
+    <string name="preference_clip_title">クリップボードモード</string>
+    <string name="preference_clip_summary">アプリを立ち上げた時にクリップボードを読んでトーストを出します</string>
+</resources>
