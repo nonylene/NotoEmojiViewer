@@ -52,12 +52,11 @@ public class MainActivity : Activity() {
 
     @Nullable
     private fun readFromClipBoard() : String? {
-        var clipText : String? = null
         (getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager).primaryClip?.let{
             val item = it.getItemAt(0)
-            item.text?.let { text -> clipText = text.toString() }
-            item.uri?.let { uri -> clipText = uri.toString() }
+            item.text?.let { text -> return text.toString() }
+            item.uri?.let { uri -> return uri.toString() }
         }
-        return clipText
+        return null
     }
 }
